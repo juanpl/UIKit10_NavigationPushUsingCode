@@ -35,7 +35,9 @@ class ViewControllerC: UIViewController {
         ])
     }
     
+    @objc
     func starNavigation() {
+        self.present(ViewControllerD(), animated: true)
 
     }
 }
