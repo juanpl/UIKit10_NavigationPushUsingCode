@@ -9,10 +9,33 @@ import UIKit
 
 class ViewControllerC: UIViewController {
     
+    private lazy var swiftbetaButton: UIButton = {
+        var configuration = UIButton.Configuration.bordered()
+        configuration.title = "Suscribe to SwiftBeta!"
+        
+        let button = UIButton(type: .system, primaryAction: UIAction(handler: { _ in
+            self.starNavigation()
+        }))
+        
+        button.configuration = configuration
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .orange
         title = "ViewControllerC"
+        view.addSubview(swiftbetaButton)
+        
+        NSLayoutConstraint.activate([
+            swiftbetaButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            swiftbetaButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
+    
+    func starNavigation() {
+
     }
 }

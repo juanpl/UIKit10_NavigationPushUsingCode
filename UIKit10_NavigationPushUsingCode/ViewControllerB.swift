@@ -21,7 +21,7 @@ class ViewControllerB: UIViewController {
     
     @objc
     private func nextViewController() {
-        
+        self.navigationController?.pushViewController(ViewControllerC(), animated: true)
     }
 
 
