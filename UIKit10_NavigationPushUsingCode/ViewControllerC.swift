@@ -37,7 +37,7 @@ class ViewControllerC: UIViewController {
     
     @objc
     func starNavigation() {
-        self.present(ViewControllerD(), animated: true)
+        self.navigationController?.popViewController(animated: true)
 
     }
 }
